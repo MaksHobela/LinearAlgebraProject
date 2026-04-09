@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 import os
-from LinearAlgebraProject.src.inference import predict_dialect
-from LinearAlgebraProject.src.train_data import run_training_for_all_dialects
+from src.inference import predict_dialect
+from src.train_data import run_training_for_all_dialects
 
 def load_trained_models():
     models = {}
