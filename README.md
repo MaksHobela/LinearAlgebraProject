@@ -43,7 +43,7 @@ python main.py --ratio <[0,1]> --c <[1, +∞]> --eta <[0,1]> --interactive
 | `--ratio` | `float` | Proportion of data for training (0.0 to 1.0). The remainder is used for testing. | `0.75` |
 | `--c` | `float` | SVM regularization parameter. Higher `C` reduces training errors but increases overfitting risk. | `100.0` |
 | `--eta` | `float` | Learning rate for the gradient descent optimizer. | `0.01` |
-| `--interactive` | `flag` | Enables interactive mode after training to test custom sentences. | `False` |
+| `--interactive`  | `flag` | Enables interactive mode after training to test custom sentences. | `False` |
 
 ### Usage Examples
 
