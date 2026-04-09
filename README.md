@@ -132,8 +132,8 @@ Enter Swiss sentence (or 'exit'): exit
 
 ## Videos
 
-Short demo videos from each team member:
+Short videos from each team member:
 
 - **Olesia** — [Watch on YouTube](https://youtu.be/ZUUyzA5NPTM?si=iPeY026aJdrU_mgl)
 - **Maksym** — [Watch on YouTube](https://www.youtube.com/watch?v=-wPdc0DLMuc&t=7s)
-- **Myron** — *coming soon*
+- **Myron** — [Watch on YouTube](https://youtu.be/943y6-C0Inc?si=agyytCHeWBqM3Spq)
