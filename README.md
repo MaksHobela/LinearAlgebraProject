@@ -1,14 +1,41 @@
-## REQUIREMENTS
-At first install the next libraries using next command:
+# DETERMINING SWISS GERMAN DIALECTS USING LINEAR ALGEBRA
+
+## Authors
+
+- [Olesia Hapiuk](https://github.com/olkaleska)
+- [Maksym Hobela](https://github.com/MaksHobela)
+- [Myron Ivanytskyi](https://github.com/ivamax-create)
+
+## Description
+Swiss German has many regional dialects that sound very different from each other.
+This project tries to solve a simple problem: given a sentence, which dialect is it?
+The program trains a custom SVM model using character-level n-grams and classifies text into one of four dialects:
+- Bern (BE);
+- Basel (BE);
+- Luzern (LU);
+- Zurich (ZH).
+
+You can adjust training parameters, validate accuracy on test data, and even try your own sentences in interactive mode.
+For a full technical breakdown, see the project report.
+
+## Requirements
+
+Install the required libraries before running:
+
 ```
 pip install -r requirements.txt
 ```
-If you don't do this, the programm won't launch.
-## USAGE
-To launch the programm, you need to use next command:
+
+> ⚠️ The program will not launch without this step.
+
+---
+
+## Usage
+
 ```
 python main.py --ratio <[0,1]> --c <[1, +∞]> --eta <[0,1]> --interactive
 ```
+
 ### CLI Flags
 
 | Flag | Type | Description | Default |
@@ -18,22 +45,23 @@ python main.py --ratio <[0,1]> --c <[1, +∞]> --eta <[0,1]> --interactive
 | `--eta` | `float` | Learning rate for the gradient descent optimizer. | `0.01` |
 | `--interactive` | `flag` | Enables interactive mode after training to test custom sentences. | `False` |
 
-### Usage example
-Expected input:
+### Usage Examples
+
+**Example 1 — standard validation**
+
+Input:
 ```
 python main.py --ratio 0.8 --c 110 --eta 0.011
 ```
-Expected output:
 
+Output:
 ```
 Saved 941 sentences for clean validation to test_dataset.csv
 Dialect BE: 1995 features saved (Train size: 3763)
 Dialect BS: 1302 features saved (Train size: 3763)
 Dialect ZH: 1490 features saved (Train size: 3763)
 Dialect LU: 1093 features saved (Train size: 3763)
-
 Validating 941 sentences...
-
 ==================================================
 RESULT: 58.66% accuracy
 ==================================================
@@ -52,25 +80,26 @@ Is LU, was identified as BS: 16
 Is ZH, was identified as LU: 16
 Is BS, was identified as LU: 12
 ==================================================
-
 ==================================================
 SYSTEM READY (C=110.0, Ratio=0.8, Eta=0.011)
 ==================================================
 ```
-Expected input:
+
+**Example 2 — interactive mode**
+
+Input:
 ```
 python main.py --ratio 0.8 --c 110 --interactive
 ```
-Expected output:
+
+Output:
 ```
 Saved 941 sentences for clean validation to test_dataset.csv
 Dialect BE: 1995 features saved (Train size: 3763)
 Dialect BS: 1302 features saved (Train size: 3763)
 Dialect ZH: 1490 features saved (Train size: 3763)
 Dialect LU: 1093 features saved (Train size: 3763)
-
 Validating 941 sentences...
-
 ==================================================
 RESULT: 54.73% accuracy
 ==================================================
@@ -89,17 +118,22 @@ Is ZH, was identified as LU: 11
 Is BS, was identified as LU: 11
 Is BE, was identified as ZH: 6
 ==================================================
-
 ==================================================
 SYSTEM READY (C=110.0, Ratio=0.8, Eta=0.01)
 ==================================================
-
 Enter Swiss sentence (or 'exit'): das isch schwirig gnue gsi
 Result: BE (Score: -0.95)
-
 Enter Swiss sentence (or 'exit'): plaage schtööre we me sim
 Result: BE (Score: -0.90)
-
 Enter Swiss sentence (or 'exit'): exit
 ```
 
+---
+
+## Videos
+
+Short demo videos from each team member:
+
+- **Olesia** — [Watch on YouTube](https://youtu.be/ZUUyzA5NPTM?si=iPeY026aJdrU_mgl)
+- **Maksym** — [Watch on YouTube](https://www.youtube.com/watch?v=-wPdc0DLMuc&t=7s)
+- **Myron** — *coming soon*
