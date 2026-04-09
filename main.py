@@ -3,9 +3,9 @@ import shutil
 import argparse
 import pandas as pd
 import numpy as np
-from prepare_data import prepare_dialect_data
-from train_data import run_training_for_all_dialects
-from inference import predict_dialect
+from LinearAlgebraProject.src.prepare_data import prepare_dialect_data
+from LinearAlgebraProject.src.train_data import run_training_for_all_dialects
+from LinearAlgebraProject.src.inference import predict_dialect
 
 def clean_old_data():
     folders = [f for f in os.listdir('.') if f.startswith('dialect_') and os.path.isdir(f)]
@@ -33,7 +33,7 @@ def main():
         return
 
     if os.path.exists("test_dataset.csv"):
-        from error_report import generate_error_summary
+        from LinearAlgebraProject.src.error_report import generate_error_summary
         generate_error_summary(trained_models)
 
     print("\n" + "="*50)
