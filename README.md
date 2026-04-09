@@ -8,15 +8,15 @@
 
 ## Description
 Swiss German has many regional dialects that sound very different from each other.
-This project tries to solve a simple problem: given a sentence, which dialect is it?
+This project tries to solve a simple problem: given a sentence which dialect is it?
 The program trains a custom SVM model using character-level n-grams and classifies text into one of four dialects:
 - Bern (BE);
 - Basel (BE);
 - Luzern (LU);
 - Zurich (ZH).
 
-You can adjust training parameters, validate accuracy on test data, and even try your own sentences in interactive mode.
-For a full technical breakdown, see the project report.
+You can adjust training parameters, validate accuracy on test data and even try your own sentences in interactive mode.
+For a full technical breakdown, see the project report. The main algorithm is implemented in ```train_data.py```.
 
 ## Requirements
 
