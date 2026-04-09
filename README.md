@@ -57,4 +57,49 @@ Is BS, was identified as LU: 12
 SYSTEM READY (C=110.0, Ratio=0.8, Eta=0.011)
 ==================================================
 ```
+Expected input:
+```
+python main.py --ratio 0.8 --c 110 --interactive
+```
+Expected output:
+```
+Saved 941 sentences for clean validation to test_dataset.csv
+Dialect BE: 1995 features saved (Train size: 3763)
+Dialect BS: 1302 features saved (Train size: 3763)
+Dialect ZH: 1490 features saved (Train size: 3763)
+Dialect LU: 1093 features saved (Train size: 3763)
+
+Validating 941 sentences...
+
+==================================================
+RESULT: 54.73% accuracy
+==================================================
+MOST COMMON DIALECT ERRORS:
+==================================================
+Is LU, was identified as BE: 96
+Is ZH, was identified as BE: 87
+Is BS, was identified as BE: 81
+Is ZH, was identified as BS: 28
+Is BE, was identified as LU: 28
+Is BE, was identified as BS: 23
+Is LU, was identified as ZH: 22
+Is BS, was identified as ZH: 20
+Is LU, was identified as BS: 13
+Is ZH, was identified as LU: 11
+Is BS, was identified as LU: 11
+Is BE, was identified as ZH: 6
+==================================================
+
+==================================================
+SYSTEM READY (C=110.0, Ratio=0.8, Eta=0.01)
+==================================================
+
+Enter Swiss sentence (or 'exit'): das isch schwirig gnue gsi
+Result: BE (Score: -0.95)
+
+Enter Swiss sentence (or 'exit'): plaage schtööre we me sim
+Result: BE (Score: -0.90)
+
+Enter Swiss sentence (or 'exit'): exit
+```
 
