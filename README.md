@@ -11,7 +11,7 @@ Swiss German has many regional dialects that sound very different from each othe
 This project tries to solve a simple problem: given a sentence which dialect is it?
 The program trains a custom SVM model using character-level n-grams and classifies text into one of four dialects:
 - Bern (BE);
-- Basel (BE);
+- Basel (BS);
 - Luzern (LU);
 - Zurich (ZH).
 
